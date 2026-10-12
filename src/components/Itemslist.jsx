@@ -1,4 +1,6 @@
 import React from "react";
+import {Link} from "react-router-dom";
+
 
 function Itemlist() {
 const list = [
@@ -26,7 +28,7 @@ return ( <div> <ul>
 {
 list.map((item) => ( 
   <li key={item.id}>
-    <Link to="/Itemdetails/:${item.id}">{item.name}</Link>
+   <Link to={`/Itemdetails/${item.id}`}>{item.name}</Link>
   </li>
 ))}
 </ul>
